@@ -1,0 +1,29 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml">
+    <MenuBar BorderPane.alignment="TOP_CENTER">
+        <menus>
+            <Menu text="Действия">
+                <items>
+                    <MenuItem onAction="#clickNew" text="Новый документ"/>
+                    <MenuItem onAction="#clickLoad" text="Загрузить 1.txt"/>
+                    <MenuItem text="Сформировать базу"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem onAction="#clickOnExit" text="Выход"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <TextArea fx:id="mainTextArea" VBox.vgrow="ALWAYS"/>
+</VBox>
